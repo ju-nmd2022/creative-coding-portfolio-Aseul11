@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(800, 800);
-  noLoop(); // Draw once, without animation
+  noLoop();
   noFill();
   rectMode(CENTER);
 }
@@ -8,10 +8,10 @@ function setup() {
 function draw() {
   background(20);
 
-  const gridSize = 3; // 3x3 grid for 9 rectangles
-  const spacing = 130; // Space between rectangles
-  const startX = (width - (gridSize - 0.6) * spacing) / 2; // Centering calculations
-  const startY = (height - (gridSize - 0.6) * spacing) / 2; // Centering calculations
+  const gridSize = 3;
+  const spacing = 130;
+  const startX = (width - (gridSize - 0.6) * spacing) / 2;
+  const startY = (height - (gridSize - 0.6) * spacing) / 2;
 
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {
@@ -19,15 +19,15 @@ function draw() {
       const y = startY + row * spacing;
 
       let r = 3;
-      let opacity = 255; // Starting opacity
-      const opacityStep = 230 / 20; // Decrease opacity for each rectangle
+      let opacity = 255;
+      const opacityStep = 230 / 20;
 
       for (let w = 100; w > 0; w -= r) {
-        stroke(225, opacity); // Set stroke color to white with decreasing opacity
-        rect(x, y, w, w); // Draw rectangle without rotation
+        stroke(225, opacity);
+        rect(x, y, w, w);
 
-        opacity -= opacityStep; // Reduce opacity
-        r = random(2, 6); // Random size change
+        opacity -= opacityStep;
+        r = random(2, 6);
       }
     }
   }
