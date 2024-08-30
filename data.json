@@ -1,37 +1,37 @@
 [
   {
     "file": "experiments/mountains.js",
-    "name": "Mountains",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Waves 1.0",
+    "description": "This artwork uses Perlin noise to create multiple waves with color gradient in between."
   },
 
   {
     "file": "experiments/mountains-var1.js",
-    "name": "Mountains dissapearing",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Waves 2.0",
+    "description": "For this work, I took the same idea with waves but decided to add more depth by adding multiple overlapping layers with decreasing opacity to create a sense of depth."
   },
 
   {
     "file": "experiments/mountains-var2.js",
-    "name": "Sound waves",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "The Sound 3.0",
+    "description": "I continued experimanting with waves and this time added motion to the art piece. I wanted to immitate the sound waves that shange as the sound changes."
   },
 
   {
     "file": "experiments/rect.js",
-    "name": "Mountains",
-    "description": ""
+    "name": "Windows 1.0",
+    "description": "This work was inspired by Vera Molnár's Computer rosace-series (1974) artwork. I put multiple rectangles to the grid and played with opacity to create a fading effect closer to the middle of every rectangle to add more volume to the art piece."
   },
 
   {
     "file": "experiments/rect-var1.js",
-    "name": "Mountains variation 1",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Geometric flowers 2.0",
+    "description": "This work also uses rectangles and grid, but this time I added colors and rotation, making each rectangle seem like a geometric flower."
   },
 
   {
     "file": "experiments/rect-var2.js",
-    "name": "Mountains variation 2",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Flower field 3.0",
+    "description": "For this artwork, I made a grid of animated rectangles that change size and switch colors over time."
   }
 ]
