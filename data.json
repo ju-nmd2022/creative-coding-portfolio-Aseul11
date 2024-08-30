@@ -3,31 +3,31 @@
     "file": "experiments/mountains.js",
     "name": "Mountains",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  }
+  },
 
   {
     "file": "experiments/mountains-var1.js",
     "name": "Mountains dissapearing",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  }
+  },
 
   {
     "file": "experiments/mountains-var2.js",
     "name": "Sound waves",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  }
+  },
 
   {
     "file": "experiments/rect.js",
     "name": "Mountains",
     "description": ""
-  }
+  },
 
   {
     "file": "experiments/rect-var1.js",
     "name": "Mountains variation 1",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  }
+  },
 
   {
     "file": "experiments/rect-var2.js",
