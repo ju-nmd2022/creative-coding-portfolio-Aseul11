@@ -6,7 +6,7 @@ function setup() {
 }
 
 function draw() {
-  background(30);
+  background(74, 133, 96);
 
   const gridSize = 10;
   const rectSize = 30;

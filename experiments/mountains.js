@@ -31,7 +31,7 @@ function draw() {
     const nextY = originalY + waveSpacing;
     const colorHue = map(i, 0, waveCount, 0, 255);
 
-    fill(colorHue, 156, 141);
+    fill(colorHue, 146, 141);
     noStroke();
 
     beginShape();
