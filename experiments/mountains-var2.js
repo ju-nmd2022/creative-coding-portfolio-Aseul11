@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(600, 600);
   frameRate(30);
 }
 
@@ -18,7 +18,7 @@ function draw() {
   noFill();
 
   for (let i = 0; i < waveCount; i++) {
-    const originalY = 300 + i * waveSpacing;
+    const originalY = 200 + i * waveSpacing;
     beginShape();
 
     for (let x = 0; x < width; x++) {

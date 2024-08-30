@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(600, 600);
   noLoop();
 }
 
@@ -8,7 +8,7 @@ function draw() {
 
   const waveCount = 7;
   const waveHeight = 60;
-  const waveSpacing = 80;
+  const waveSpacing = 45;
   const divider = 60;
 
   noiseSeed(15);

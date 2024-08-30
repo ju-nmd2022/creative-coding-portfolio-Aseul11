@@ -1,50 +1,34 @@
+let t = 0;
+
 function setup() {
-  createCanvas(800, 800);
-  noLoop();
-  rectMode(CENTER);
+  createCanvas(600, 600);
   noFill();
+  rectMode(CENTER);
 }
 
 function draw() {
-  background(74, 133, 96);
+  background(20);
 
-  const gridSize = 10;
-  const rectSize = 30;
-  const spacing = 50;
+  const gridSize = 6;
+  const spacing = 80;
+  const startX = (width - (gridSize + 0.7) * spacing) / 2;
+  const startY = (height - (gridSize + 2.5) * spacing) / 2;
 
-  const colors = [
-    color(255, 182, 193),
-    color(144, 238, 144),
-    color(255, 182, 193),
-    color(255, 255, 255),
-  ];
+  strokeWeight(1.5);
 
-  const totalWidth = gridSize * spacing;
-  const totalHeight = gridSize * spacing;
+  for (let row = 0; row < gridSize; row++) {
+    for (let col = 0; col < gridSize; col++) {
+      const x = startX + col * spacing;
+      const y = startY + row * spacing;
 
-  const startX = (width - totalWidth) / 2 + spacing / 2;
-  const startY = (height - totalHeight) / 2 + spacing / 2;
+      let animatedSize = map(sin(t + (row + col) * 0.5), -1, 1, 20, 50);
 
-  for (let y = 0; y < gridSize; y++) {
-    for (let x = 0; x < gridSize; x++) {
-      const patternIndex = (x + y * gridSize) % 4;
-      const currentX = startX + x * spacing;
-      const currentY = startY + y * spacing;
-
-      if (patternIndex === 0 || patternIndex === 1) {
-        fill(colors[patternIndex]);
-        noStroke();
-        rect(currentX, currentY, rectSize, rectSize);
-      } else if (patternIndex === 2) {
-        noFill();
-        stroke(colors[patternIndex]);
-        strokeWeight(2);
-        rect(currentX, currentY, rectSize, rectSize);
-      } else if (patternIndex === 3) {
-        fill(colors[patternIndex]);
-        noStroke();
-        rect(currentX, currentY, rectSize, rectSize);
+      for (let w = animatedSize; w > 0; w -= 10) {
+        stroke(random(255), random(255), random(255));
+        rect(x, y, w, w);
       }
     }
   }
+
+  t += 0.1;
 }
