@@ -14,13 +14,13 @@
   {
     "file": "experiments/mountains-var2.js",
     "name": "The Sound 3.0",
-    "description": "I continued experimanting with waves and this time added motion to the art piece. I wanted to immitate the sound waves that shange as the sound changes."
+    "description": "I continued experimenting with waves and this time added motion to the art piece. I wanted to immitate the sound waves that move as the sound changes."
   },
 
   {
     "file": "experiments/rect.js",
     "name": "Windows 1.0",
-    "description": "This work was inspired by Vera Molnár's Computer rosace-series (1974) artwork. I put multiple rectangles to the grid and played with opacity to create a fading effect closer to the middle of every rectangle to add more volume to the art piece."
+    "description": "This work was inspired by Vera Molnár's Computer rosace-series (1974) artwork. I put multiple rectangles to the grid and played with opacity to create a fading effect that increase closer to the middle of each rectangle to add more volume to the art piece."
   },
 
   {
@@ -32,6 +32,6 @@
   {
     "file": "experiments/rect-var2.js",
     "name": "Flower field 3.0",
-    "description": "For this artwork, I made a grid of animated rectangles that change size and switch colors over time."
+    "description": "For this artwork, I made a grid of animated rectangles that change in size and switch colors over time."
   }
 ]
