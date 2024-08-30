@@ -18,6 +18,7 @@ function draw() {
       const x = startX + col * spacing;
       const y = startY + row * spacing;
 
+      // got explanation about how to implement the opacity from chatGPT
       let r = 3;
       let opacity = 255;
       const opacityStep = 230 / 20;

@@ -21,6 +21,7 @@ function draw() {
       const x = startX + col * spacing;
       const y = startY + row * spacing;
 
+      // made the rectangles change the size using the logic from one of the examples shown during the lecture and chatGPT
       let animatedSize = map(sin(t + (row + col) * 0.5), -1, 1, 20, 50);
 
       for (let w = animatedSize; w > 0; w -= 10) {

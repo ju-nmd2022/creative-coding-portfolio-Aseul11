@@ -16,19 +16,11 @@ function draw() {
   fill(0, 0, 0);
   noStroke();
 
-  beginShape();
-  vertex(0, 0);
-  for (let x = 0; x < width; x++) {
-    const y = 100 + noise(x / divider) * waveHeight;
-    vertex(x, y);
-  }
-
-  vertex(width, 0);
-  endShape(CLOSE);
-
   for (let i = 0; i < waveCount; i++) {
     const originalY = 100 + i * waveSpacing;
     const nextY = originalY + waveSpacing;
+
+    // Figured out how to add gradient and colour between waves with help of chatGPT
     const colorHue = map(i, 0, waveCount, 0, 255);
 
     fill(colorHue, 146, 141);

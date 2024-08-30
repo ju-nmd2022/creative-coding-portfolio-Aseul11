@@ -16,6 +16,7 @@ function draw() {
 
   strokeWeight(1.5);
 
+  // used the logic from the example from the lecture
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {
       const x = startX + col * spacing;

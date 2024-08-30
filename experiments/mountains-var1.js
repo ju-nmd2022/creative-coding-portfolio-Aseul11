@@ -16,6 +16,8 @@ function draw() {
 
   for (let i = 0; i < waveCount; i++) {
     const originalY = 100 + i * waveSpacing;
+
+    // This part with baseColor was written with help of chatGPT
     const baseColor = color(map(i, 0, waveCount, 0, 255), 156, 141);
 
     for (let layer = 0; layer < layers; layer++) {
