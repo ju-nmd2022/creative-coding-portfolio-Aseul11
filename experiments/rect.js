@@ -10,8 +10,8 @@ function draw() {
 
   const gridSize = 3;
   const spacing = 130;
-  const startX = (width - gridSize * spacing) / 2;
-  const startY = (height - (gridSize + 1) * spacing) / 2;
+  const startX = (width - (gridSize - 1) * spacing) / 2;
+  const startY = (height - (gridSize - 1) * spacing) / 2;
 
   for (let row = 0; row < gridSize; row++) {
     for (let col = 0; col < gridSize; col++) {

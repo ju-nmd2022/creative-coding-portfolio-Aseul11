@@ -10,8 +10,8 @@ function draw() {
 
   const gridSize = 3;
   const spacing = 150;
-  const startX = (width - gridSize * spacing) / 2;
-  const startY = (height - (gridSize + 1) * spacing) / 2;
+  const startX = (width - (gridSize - 1) * spacing) / 2;
+  const startY = (height - (gridSize - 1) * spacing) / 2;
   const gap = 90;
 
   strokeWeight(1.5);
