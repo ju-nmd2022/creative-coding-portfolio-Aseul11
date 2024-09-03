@@ -33,5 +33,11 @@
     "file": "experiments/rect-var2.js",
     "name": "Flower field 3.0",
     "description": "For this artwork, I made a grid of animated rectangles that change in size and switch colors over time."
+  },
+
+  {
+    "file": "experiments/sketch.js",
+    "name": "Flowfield",
+    "description": ".............."
   }
 ]
