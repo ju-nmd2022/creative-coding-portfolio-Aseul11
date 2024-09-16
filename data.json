@@ -36,7 +36,19 @@
   },
 
   {
-    "file": "experiments/sketch.js",
+    "file": "experiments/flowfield-var1.js",
+    "name": "Flowfield",
+    "description": ".............."
+  },
+
+  {
+    "file": "experiments/flowfield-var2.js",
+    "name": "Flowfield",
+    "description": ".............."
+  },
+
+  {
+    "file": "experiments/flowfield-var3.js",
     "name": "Flowfield",
     "description": ".............."
   }
