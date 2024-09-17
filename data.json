@@ -37,19 +37,19 @@
 
   {
     "file": "experiments/flowfield-var1.js",
-    "name": "Flowfield",
-    "description": ".............."
+    "name": "Pattern 1.0",
+    "description": "Experimenting with flowfield"
   },
 
   {
     "file": "experiments/flowfield-var2.js",
-    "name": "Flowfield",
-    "description": ".............."
+    "name": "Pattern 2.0",
+    "description": "Experimenting with flowfield"
   },
 
   {
     "file": "experiments/flowfield-var3.js",
-    "name": "Flowfield",
-    "description": ".............."
+    "name": "Pattern 3.0",
+    "description": "TRY DRAWING HERE! For this work I added mouse control to be able to draw on canvas. I experimented with values to create patterns by drawing."
   }
 ]

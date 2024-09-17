@@ -1,7 +1,7 @@
 let t = 0;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   noFill();
   rectMode(CENTER);
 }
