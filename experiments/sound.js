@@ -1,44 +1,74 @@
 let synth;
+let reverb;
+let soundStarted = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 
-  // Initialize a simple Tone.js synth
-  synth = new Tone.Synth().toDestination();
-  Tone.start(); // Starts audio context, required by Tone.js
+  synth = new Tone.PolySynth(Tone.Synth, {
+    oscillator: {
+      type: "sine",
+    },
+    envelope: {
+      attack: 0.3,
+      decay: 0.3,
+      sustain: 0.5,
+      release: 1.5,
+    },
+  }).toDestination();
+
+  synth.volume.value = -10;
+
+  reverb = new Tone.Reverb({
+    decay: 2,
+    preDelay: 0.1,
+  }).toDestination();
+  synth.connect(reverb);
 }
 
 function draw() {
   background(30);
+
+  if (!soundStarted) {
+    textAlign(CENTER);
+    textSize(32);
+    fill(255);
+    text("Click to Start Sound", width / 2, height / 2);
+    return;
+  }
+
   stroke(255);
   noFill();
-
   translate(width / 2, height / 2);
 
   beginShape();
-  for (var i = 0; i < 359; i++) {
-    var rMin = map(sin(frameCount), -1, 1, 50, 100);
-    var rMax = map(sin(frameCount * 2), -1, 1, 100, 0);
+  for (let i = 0; i < 360; i++) {
+    let rMin = map(sin(frameCount), -1, 1, 50, 100);
+    let rMax = map(sin(frameCount * 2), -1, 1, 100, 0);
 
-    var r2Min = map(sin(frameCount / 2), -1, 1, 100, 50);
-    var r2Max = map(sin(frameCount), -1, 1, 0, 100);
-
-    var r1 = map(sin(i * 3), -1, 1, rMin, rMax);
-    var r2 = map(sin(i * 6 + 90), -1, 1, rMin, rMax);
-    var r = r1 + r2;
-    var x = r * cos(i);
-    var y = r * sin(i);
+    let r1 = map(sin(i * 3), -1, 1, rMin, rMax);
+    let r2 = map(sin(i * 6 + 90), -1, 1, rMin, rMax);
+    let r = r1 + r2;
+    let x = r * cos(i);
+    let y = r * sin(i);
     vertex(x, y);
 
-    // Map the x and y values to a musical note
-    let freq = map(x, -width / 2, width / 2, 200, 800); // Frequency range in Hz
-    let volume = map(y, -height / 2, height / 2, -20, 0); // Volume in decibels
+    if (i % 60 === 0) {
+      const notes = ["C4", "E4", "G4"];
+      let noteIndex = floor(map(r, rMin, rMax, 0, notes.length));
+      let note = notes[noteIndex % notes.length];
 
-    // Play a note depending on x and y
-    synth.triggerAttackRelease(freq, "8n"); // '8n' is the duration (eighth note)
-    synth.volume.value = volume;
+      let duration = random(0.5, 1.5);
+      synth.triggerAttackRelease(note, duration);
+    }
   }
-
   endShape(CLOSE);
+}
+
+function mousePressed() {
+  Tone.start().then(() => {
+    soundStarted = true;
+    console.log("Audio Context Started");
+  });
 }

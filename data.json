@@ -54,8 +54,14 @@
   },
 
   {
-    "file": "experiments/sound1.js",
-    "name": "Sound 1.0",
-    "description": "......"
+    "file": "experiments/sound.js",
+    "name": "Sound",
+    "description": "Playing around with Tone.js"
+  },
+
+  {
+    "file": "experiments/sound2.js",
+    "name": "Sound visualizer",
+    "description": "PRESS TO START."
   }
 ]
